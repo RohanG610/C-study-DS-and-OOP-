@@ -1,4 +1,4 @@
-//Console-Based Book WishList Application and when you number of lines of code ;)
+//Console-Based Book WishList Application
 #include<iostream>
 #include<string>
 #include<string.h>
@@ -7,6 +7,7 @@ using namespace std;
 class DataBook{
 private:
 int length=0;
+float price[100];
 char book_name[100][100];
 char author[100][100];
 bool isOwned[100];
@@ -27,19 +28,21 @@ void get_info()
         isOwned[length]=false;
     else
         cout<<"It is been Empty";
+    cout<<"Enter Price of the Book: ";
+    cin>>price[length];
     this->length++;
 }
 void print_info()
 {
     int i;
-    for(i=0;i<length;i++)
+    for(i=0;i<this->length;i++)
     {
         cout<<book_name[i]<<"\t"<<author[i]<<"\t";
         if(isOwned[i])
             cout<<"Owned";
         else
             cout<<"Not Owned";
-        cout<<endl;
+        cout<<"\t"<<price[i]<<endl;
     }
 }
 };
