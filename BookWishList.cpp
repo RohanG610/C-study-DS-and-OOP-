@@ -1,7 +1,6 @@
 //Console-Based Book WishList Application
 #include<iostream>
-#include<string>
-#include<string.h>
+#include<cstring>
 #include<conio.h>
 using namespace std;
 class DataBook{
