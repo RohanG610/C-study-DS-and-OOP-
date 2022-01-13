@@ -1,3 +1,3 @@
 # AnotherBoringCPPprojects
-It just contain stupid, and boring C++ project, that I am working on.
+I am maintaining my journey for learning and mastering  C++.
 I am using VScode and g++ complier.
