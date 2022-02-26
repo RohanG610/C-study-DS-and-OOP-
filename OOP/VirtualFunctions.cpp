@@ -88,5 +88,12 @@ int main(){
         per[i]->putdata();
 
     return 0;
-
 }
+/*
+Data Abstraction means hiding of usability of feature program. For example, in phone for clicking photo we only press button, but
+in Reality it follows very complex algorithm which is handle by phone manufacturers.
+It is mostly achevied by our classes and header files via not showing detailed code
+Virtual Function is function that is declared in base class and re-define(overridden) in derived class. It achieves Runtime Polymorphism
+Pure Virtual Function is functions which is necessary to be define in derived class. It syntax is virtual data_type name() = 0; Any one existence of pure virtual function can
+make class Abstract
+*/
