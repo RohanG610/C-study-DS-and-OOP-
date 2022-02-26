@@ -59,5 +59,6 @@ int main()
 /*
 When we inherit public-ly, it inherites as same;
 When we inherit protected-ly, it inherites public as protected and rest is same;
-When we inherit private-ly, it inherites all access specifier as private
+When we inherit private-ly, it inherites all access specifier as private;
+By default inheritance is private
 */
