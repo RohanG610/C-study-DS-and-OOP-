@@ -1,7 +1,12 @@
 #include<iostream>
-
 using namespace std;
-
+/*
+To be consistent with IO library, the operator should take an ostream& as its first parameters and a reference to a const object of the class type as its second.
+The operator should return a reference to its ostream parameter.
+ostream isn't const because writing to the stream changes its state. The parameter is a reference because we can't copy an ostream object.
+The second parameter ordinaruly should be a const reference to the class type we want to print, because printing an object should not change it.
+IO operators must be nonmembers functions, because we need left side operator to be ostream not class.
+*/
 class Complex
 {
 public:
