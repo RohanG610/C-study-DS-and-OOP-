@@ -2,7 +2,12 @@
 #include<string>
 #include<vector>
 using namespace std;
-
+/*
+Note: Overloaded Functions that are members of a class my appear to have one less parameter than number of operands. Operators that are member function have an implicit
+this parameter taht is bound to the first operand.
+For Member function, left-hand operand is bound to implicit this pointer. Ex: Sales_item& Sales_item::operator+=(const Sales_item&); here reference is use because we have to modify current class members' value.
+For Non-member function, binary operator must delcare a parameter for each operand. Ex: Sales_item operator+(const Sales_item&, const Sales_item&); here when defining non-member function we use friend to access private class members.
+*/
 class Job
 {
     private:
@@ -104,7 +109,7 @@ int main()
     Total t1;
     MonthlyExpense me1;
     me1.get_expense();
-    t1+=j1;
+    t1+=j1;// Same as using t1.operator+=(j1) Note: For non member operator function we have operator+=(t1,j1)
     t1+=i1;
     j1.print_info();
     i1.print_info();
@@ -114,3 +119,13 @@ int main()
     t2.print_info();
     return 0;
 }
+/*
+Choosing Member or Nonmember Implmentation:
+
+1) The assignment(=), subscript([]), call(()), and the member access arrow( -> ) operators muct be defined as memebrs.Defing any of these operators as a nonmember is flagged at
+   compile time as an error
+2) Unlike assignment, compound-assignment operators ordinarily ought to be members of the class but can be non-member also.
+3) Other operators that change the state of their object or that are closely tied to their given type - such as increment, decrement, and dereference usally should be 
+   member of the class
+4) Symmetric operators, such as the arthmetic , equality, relational, and bitwise operators, are best defined as ordinary nonmember function.
+*/
