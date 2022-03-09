@@ -1,6 +1,10 @@
 #include<iostream>
 using namespace std;
-
+/*
+The try statement allows you to define a block of code to be tested for errors while it is executed.
+The throw keyword throws an exception when a problem is detected(also lets us create a custom error).
+The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+*/
 int main()
 {
    int x = -1;
